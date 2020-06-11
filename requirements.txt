@@ -1,0 +1,5 @@
+requests
+flask-socketio
+setuptools
+pytest
+eventlet
