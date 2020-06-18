@@ -2,8 +2,9 @@ import socketio
 import json
 import logging
 import time
-sio = socketio.Client()
+sio = socketio.Client(reconnection=True)
 counter = 0
+import argparse
 
 @sio.event
 def __connect():
@@ -32,12 +33,13 @@ def subscribeMktData(mktdatacode:str):
     sio.emit("//blp/mktdata", mktRequest)
 
 if __name__ == "__main__":
-    hostname = "localhost"
-    hostname = "ALB-t-907109132.us-east-2.elb.amazonaws.com"
-    port = 80
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-l", "--location", help="hostname:port", type=str, default="localhost:80", required=True)
+    args = parser.parse_args()
+    location = args.location
 
-    url = f"ws://{hostname}:{port}"
-    sio.connect(url)
+    url = f"ws://{location}"
+    sio.connect(url, headers={"user":"pigpig", "token":"abcd"})
 
     subscribeMktData("AAPL 150117C00600000 EQUITY")
 

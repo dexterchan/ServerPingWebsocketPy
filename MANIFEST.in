@@ -1,0 +1,4 @@
+exclude virtualenv
+include *.py
+recursive-include PyPingServer *.py
+recursive-include Client *.py

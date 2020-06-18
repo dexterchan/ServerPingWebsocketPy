@@ -1,1 +1,4 @@
 virtualenv/
+dist
+*.pyc
+.idea
