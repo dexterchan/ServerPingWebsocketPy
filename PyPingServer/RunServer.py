@@ -4,7 +4,7 @@ import argparse
 from PyPingServer.app import  app, socketio
 from PyPingServer.controller.healthcheck import httphealthCheck
 from PyPingServer.controller.authenticate import authenticate
-from PyPingServer.controller.ping import handle_marketdataSubscription
+from PyPingServer.controller.ping import initMarketData
 
 
 
@@ -18,5 +18,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     port = args.port
 
+    initMarketData()
     print(f"Running at port {port}")
     socketio.run(app, host="0.0.0.0", port=port)

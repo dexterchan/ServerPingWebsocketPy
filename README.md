@@ -20,10 +20,15 @@ python3 setup.py sdist
 Run
 ````
 python3 PyPingServer/RunServer.py
-
+````
 
 ##Python client
 Run 
 ````
 python3 Client/ConnectMkt.py
+````
+
+Test Package
+````
+pytest tests
 ````
