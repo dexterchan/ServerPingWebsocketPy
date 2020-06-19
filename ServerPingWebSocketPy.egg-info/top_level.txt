@@ -2,3 +2,5 @@ Client
 PyFlaskSocketIOServer
 PyMktData
 PyPingServerIntegrationTest
+PySocketIOServer
+utilities

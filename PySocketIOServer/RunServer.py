@@ -3,6 +3,7 @@ import socketio
 from flask import Flask
 app = Flask(__name__)
 import json
+import eventlet
 
 sio = socketio.Server(async_mode='eventlet')
 
@@ -61,6 +62,7 @@ def handle_marketdataSubscription(sid, mktDataRequest):
 
     def sioconsumerFunc(msg):
         sio.emit("//blp/mktdata/response", json.dumps(msg))
+        eventlet.sleep(0)
 
     clientId = sid
     if "mktdatacode" not in mktDataRequest:
@@ -68,15 +70,15 @@ def handle_marketdataSubscription(sid, mktDataRequest):
 
 
 
-    #marketDataInterface.subscribe(
-    #    clientId, mktDataRequest, sioconsumerFunc
-     #)
+    marketDataInterface.subscribe(
+        clientId, mktDataRequest, sioconsumerFunc
+     )
 
 # We kick off our server
 if __name__ == '__main__':
     port = 3000
     initMarketData()
     app = socketio.WSGIApp(sio)
-    import eventlet
+
 
     eventlet.wsgi.server(eventlet.listen(('0.0.0.0', port)), app)
