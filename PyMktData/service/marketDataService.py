@@ -39,6 +39,7 @@ class DummyMarkDataImpl(MarketDataInterface):
     self.max = 10
     self.subjectMap = {}
     self.isAlive = True
+    self.WAITTIME = 1
 
   def connect(self):
     logging.info("Connecting to market data server")
@@ -69,14 +70,15 @@ class DummyMarkDataImpl(MarketDataInterface):
   def ___listenData(self):
 
     while (self.isAlive):
-      time.sleep(1)
+      time.sleep(self.WAITTIME)
       for mktdatacode in self.subjectMap.keys():
-        logging.info(f"length of subjectmap {len(self.subjectMap)}")
+        #logging.info(f"length of subjectmap {len(self.subjectMap)}")
         self.subjectMap[mktdatacode].notifyObservers(
           self.pollMarketData(mktdatacode)
         )
   def pollMarketData(self, mktdatacode):
     return {
+            "timestamp_ms": int(time.time() * 1000*1000),
             "Bid": random.random() * (self.max - self.min) + self.min,
             "Ask": random.random() * (self.max - self.min) + self.min
           }

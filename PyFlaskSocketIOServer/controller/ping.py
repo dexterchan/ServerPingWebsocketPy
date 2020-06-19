@@ -3,10 +3,14 @@ from flask_socketio import emit
 from flask import request
 import json
 import eventlet
-
+import logging
 from PyMktData.service.marketDataService import DummyMarkDataImpl
 
 marketDataInterface = None
+
+TIMEOUT_MKT_SEC=10
+
+ClientMapALive = {}
 
 def initMarketData():
     global marketDataInterface
@@ -16,13 +20,21 @@ def initMarketData():
 @socketio.on("connect")
 def connect():
     header=request.headers
+    clientId = request.sid
+    ClientMapALive[clientId] = True
     print(f'connection established {header}')
     if ("user" not in header):
         raise ConnectionRefusedError('unauthorized!')
 
 @socketio.on("disconnect")
-def connect():
-    print('disconnect')
+def disconnect():
+    clientId = request.sid
+    if clientId in ClientMapALive:
+        ClientMapALive[clientId] = False
+    print('disconnect:' + clientId)
+
+
+from utilities.container import BlockingQueue
 
 def flushStreamData(sio, channel, msg):
     sio.emit(channel, msg)
@@ -30,28 +42,24 @@ def flushStreamData(sio, channel, msg):
 
 @socketio.on("//blp/mktdata")
 def handle_marketdataSubscription(mktDataRequest):
-    #not working with flask websocket.... lost the session when callback by thread
+    # Note: socket connection from front end thread cannot shared with other thread
+    # If we send the sio to background thread,
+    # the callback in background thread cannot connect to client anymore
+    # therefore, we use blocking queue to pass data from background thread to frontend thread
 
-    consumerFunc = lambda sio: lambda msg: flushStreamData(sio, "//blp/mktdata/response", json.dumps(msg))
-
+    blockingQueue = BlockingQueue()
     clientId = request.sid
     if "mktdatacode" not in mktDataRequest:
         raise Exception ("mktdatacode not found in market data request")
 
-    sioconsumerFunc = consumerFunc(socketio)
-    #sioconsumerFunc(marketDataInterface.pollMarketData(mktDataRequest["mktdatacode"]))
+    marketDataInterface.subscribe(
+        clientId, mktDataRequest, blockingQueue.insertItem
+    )
+    if clientId not in ClientMapALive:
+        raise Exception("client is not disconnected")
 
-    #marketDataInterface.subscribe(
-    #    clientId, mktDataRequest, sioconsumerFunc
-    #)
-    import time
-    import random
-    cnt = 0
-    while (True):
-        cnt += 1
-        msg = {
-            "Bid": random.random() * (10-1) + 1,
-            "Ask": random.random() * (10-1) + 1
-        }
-        sioconsumerFunc(json.dumps(msg))
-        time.sleep(1)
+    while(ClientMapALive[clientId]):
+        msg = blockingQueue.consumeItem(TIMEOUT_MKT_SEC)
+        logging.info(clientId+":received data"+json.dumps(msg))
+        flushStreamData(socketio,  "//blp/mktdata/response", json.dumps(msg))
+    logging.info("market data disconnect Blocking queue released")

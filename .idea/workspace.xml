@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97f0b3fc-8746-412d-a2fd-80d2b49bc6a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MANIFEST.in" beforeDir="false" afterPath="$PROJECT_DIR$/MANIFEST.in" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PyFlaskSocketIOServer/controller/ping.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyFlaskSocketIOServer/controller/ping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyMktData/service/issueJwtToken.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyMktData/service/issueJwtToken.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyMktData/service/marketDataService.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyMktData/service/marketDataService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyPingServerIntegrationTest/service/testMarketDataService.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyPingServerIntegrationTest/service/testMarketDataService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PySocketIOServer/RunServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/PySocketIOServer/RunServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerPingWebSocketPy.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ServerPingWebSocketPy.egg-info/SOURCES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ServerPingWebSocketPy.egg-info/top_level.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ServerPingWebSocketPy.egg-info/top_level.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,14 +20,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PyFlaskSocketIOServer/controller/ping.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#46#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PyMktData/service/issueJwtToken.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/runMktClient.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/runMktServer.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -32,6 +64,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lengt</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -55,24 +92,32 @@
         <option value="$PROJECT_DIR$/PyPingServer/controller/ping.py" />
         <option value="$PROJECT_DIR$/PyPingServerIntegrationTest/model/testSubject.py" />
         <option value="$PROJECT_DIR$/PyMktData/model/Subject.py" />
-        <option value="$PROJECT_DIR$/PyMktData/service/marketDataService.py" />
-        <option value="$PROJECT_DIR$/MANIFEST.in" />
         <option value="$PROJECT_DIR$/PyFlaskServer/run.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/PyFlaskSocketIOServer/controller/authenticate.py" />
         <option value="$PROJECT_DIR$/PyFlaskSocketIOServer/RunServer.py" />
         <option value="$PROJECT_DIR$/PySocketIOServer.py" />
         <option value="$PROJECT_DIR$/PySocketIOServer/app.py" />
-        <option value="$PROJECT_DIR$/PyPingServerIntegrationTest/service/testMarketDataService.py" />
         <option value="$PROJECT_DIR$/PyPingServerIntegrationTest/socketio/testConnectSockerIOServer.py" />
-        <option value="$PROJECT_DIR$/PySocketIOServer/RunServer.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/PySocketIOServer/RunServer.py" />
+        <option value="$PROJECT_DIR$/utilities/container.py" />
+        <option value="$PROJECT_DIR$/PyPingServerIntegrationTest/service/testMarketDataService.py" />
+        <option value="$PROJECT_DIR$/dist/ServerPingWebSocketPy-0.1.0/PyMktData/service/marketDataService.py" />
         <option value="$PROJECT_DIR$/PyFlaskSocketIOServer/controller/ping.py" />
+        <option value="$PROJECT_DIR$/runMktServer.sh" />
+        <option value="$PROJECT_DIR$/PyMktData/service/marketDataService.py" />
+        <option value="$PROJECT_DIR$/PackDistribution.sh" />
+        <option value="$PROJECT_DIR$/buildDocker.sh" />
+        <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/MANIFEST.in" />
+        <option value="$PROJECT_DIR$/PyMktData/service/issueJwtToken.py" />
+        <option value="$PROJECT_DIR$/runMktClient.sh" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="64" />
+    <option name="x" value="248" />
     <option name="y" value="23" />
     <option name="width" value="1335" />
     <option name="height" value="797" />
@@ -99,6 +144,11 @@
             <path>
               <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
               <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
               <item name="PyFlaskSocketIOServer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -110,47 +160,7 @@
             <path>
               <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
               <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
-              <item name="PyMktData" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
-              <item name="PyMktData" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
-              <item name="PyMktData" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
-              <item name="PyPingServer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
-              <item name="PyPingServer" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
-              <item name="PyPingServer" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
-              <item name="PyPingServerIntegrationTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ServerPingWebsocketPy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ServerPingWebsocketPy" type="462c0819:PsiDirectoryNode" />
-              <item name="PyPingServerIntegrationTest" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -296,9 +306,9 @@
       <list>
         <item itemvalue="Python.ConnectMkt" />
         <item itemvalue="Python.Flask RunServer" />
+        <item itemvalue="Python tests.Unittests in testMarketDataService.py" />
         <item itemvalue="Python.testConnectSockerIOServer" />
         <item itemvalue="Python.SocketIO RunServer" />
-        <item itemvalue="Python tests.Unittests in testMarketDataService.py" />
       </list>
     </recent_temporary>
   </component>
@@ -316,53 +326,52 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.18 at 23h 11m 52s.xml">
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 32m 37s.xml">
       <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.18 at 23h 12m 42s.xml">
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 33m 18s.xml">
       <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.18 at 23h 13m 34s.xml">
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 36m 24s.xml">
       <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_testSubject_py - 2020.06.18 at 23h 19m 56s.xml">
-      <configuration name="Unittests in testSubject.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.18 at 23h 26m 44s.xml">
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 37m 55s.xml">
       <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 11h 44m 22s.xml">
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 38m 28s.xml">
       <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_testSubject_py - 2020.06.19 at 11h 51m 45s.xml">
-      <configuration name="Unittests in testSubject.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_testSubject_py - 2020.06.19 at 11h 52m 07s.xml">
-      <configuration name="Unittests in testSubject.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 11h 52m 11s.xml">
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 39m 29s.xml">
       <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 11h 52m 36s.xml">
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 40m 06s.xml">
+      <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 40m 39s.xml">
+      <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 40m 54s.xml">
+      <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_testMarketDataService_py - 2020.06.19 at 17h 41m 52s.xml">
       <configuration name="Unittests in testMarketDataService.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="23" width="1335" height="797" extended-state="0" />
-    <editor active="true" />
+    <frame x="248" y="23" width="1335" height="797" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26864535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49964765" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49964765" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5003524" side_tool="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -388,11 +397,6 @@
           <line>33</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/PyPingServerIntegrationTest/service/testMarketDataService.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -411,13 +415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyMktData/service/issueJwtToken.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -440,13 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -507,23 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/virtualenv/lib/python3.7/site-packages/flask_socketio/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5445">
-          <caret line="365" column="8" selection-start-line="365" selection-start-column="8" selection-end-line="365" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyPingServerIntegrationTest/service/testMarketDataService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/virtualenv/lib/python3.7/site-packages/socketio/client.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -538,16 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PyFlaskSocketIOServer/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/virtualenv/lib/python3.7/site-packages/socketio/middleware.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -559,13 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyMktData/model/Observer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -586,40 +542,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PySocketIOServer/RunServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PyMktData/service/marketDataService.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="81" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="81" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -629,6 +555,23 @@
           <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyMktData/model/Observer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PySocketIOServer/RunServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -643,13 +586,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/virtualenv/lib/python3.7/site-packages/flask_socketio/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/container.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyPingServerIntegrationTest/service/testMarketDataService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="57" column="50" lean-forward="true" selection-start-line="56" selection-start-column="12" selection-end-line="57" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyFlaskSocketIOServer/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/virtualenv/lib/python3.7/site-packages/pip/_vendor/urllib3/connection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="65" column="6" selection-start-line="65" selection-start-column="6" selection-end-line="65" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyMktData/service/marketDataService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="80" column="55" selection-start-line="80" selection-start-column="55" selection-end-line="80" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/ServerPingWebSocketPy-0.1.0/PyMktData/service/marketDataService.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PyFlaskSocketIOServer/controller/ping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="289">
+          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PackDistribution.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buildDocker.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="56" lean-forward="true" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="373">
+            <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PyMktData/service/issueJwtToken.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runMktServer.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runMktClient.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

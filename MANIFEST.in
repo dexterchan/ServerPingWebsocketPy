@@ -1,5 +1,5 @@
 exclude virtualenv
-include *.py
+include *.py *.sh *.txt
 recursive-include PyMktData *.py
 recursive-include Client *.py
 recursive-include PyFlaskSocketIOServer *.py
