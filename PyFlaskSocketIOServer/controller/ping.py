@@ -24,11 +24,15 @@ def connect():
 def connect():
     print('disconnect')
 
+def flushStreamData(sio, channel, msg):
+    sio.emit(channel, msg)
+    eventlet.sleep(0)
+
 @socketio.on("//blp/mktdata")
 def handle_marketdataSubscription(mktDataRequest):
     #not working with flask websocket.... lost the session when callback by thread
 
-    consumerFunc = lambda sio: lambda msg: sio.emit("//blp/mktdata/response", json.dumps(msg))
+    consumerFunc = lambda sio: lambda msg: flushStreamData(sio, "//blp/mktdata/response", json.dumps(msg))
 
     clientId = request.sid
     if "mktdatacode" not in mktDataRequest:
@@ -50,4 +54,4 @@ def handle_marketdataSubscription(mktDataRequest):
             "Ask": random.random() * (10-1) + 1
         }
         sioconsumerFunc(json.dumps(msg))
-        eventlet.sleep(1)
+        time.sleep(1)
