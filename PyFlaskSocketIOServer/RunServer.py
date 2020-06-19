@@ -1,10 +1,10 @@
 import logging
 import argparse
 
-from PyPingServer.app import  app, socketio
-from PyPingServer.controller.healthcheck import httphealthCheck
-from PyPingServer.controller.authenticate import authenticate
-from PyPingServer.controller.ping import initMarketData
+from PyFlaskSocketIOServer.app import  app, socketio
+from PyFlaskSocketIOServer.controller.healthcheck import httphealthCheck
+from PyFlaskSocketIOServer.controller.authenticate import authenticate
+from PyFlaskSocketIOServer.controller.ping import initMarketData
 
 
 

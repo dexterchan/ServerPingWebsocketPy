@@ -1,6 +1,6 @@
 import unittest
-from PyPingServer.model.Observer import MktDataObserver
-from PyPingServer.model.Subject import MarketDataSubject
+from PyMktData.model.Observer import MktDataObserver
+from PyMktData.model.Subject import MarketDataSubject
 
 from collections import deque
 

@@ -19,13 +19,14 @@ python3 setup.py sdist
 ##Python server
 Run
 ````
-python3 PyPingServer/RunServer.py
+export PYTHONPATH=.
+python3 PyFlaskSocketIOServer/RunServer.py -p 3000
 ````
 
 ##Python client
 Run 
 ````
-python3 Client/ConnectMkt.py
+python3 Client/ConnectMkt.py -l localhost:3000
 ````
 
 Test Package

@@ -1,4 +1,5 @@
 exclude virtualenv
 include *.py
-recursive-include PyPingServer *.py
+recursive-include PyMktData *.py
 recursive-include Client *.py
+recursive-include PyFlaskSocketIOServer *.py

@@ -1,4 +1,4 @@
-from PyPingServer.model.Observer import MktDataObserver
+from PyMktData.model.Observer import MktDataObserver
 
 class MarketDataSubject():
     def __init__(self, mktdatacode):
