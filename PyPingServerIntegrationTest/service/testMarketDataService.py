@@ -14,6 +14,7 @@ FORMAT = '%(asctime)-15s %(levelname)s %(message)s'
 logging.basicConfig(format=FORMAT, level=logging.DEBUG)
 
 
+
 class MarketDataServiceSuite(unittest.TestCase):
 
 

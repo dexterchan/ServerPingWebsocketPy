@@ -26,15 +26,25 @@ def connect():
 @socketio.on("//blp/mktdata")
 def handle_marketdataSubscription(mktDataRequest):
     #not working with flask websocket.... lost the session when callback by thread
-    #def consumerFunc(msg):
-    #    emit("//blp/mktdata/response", json.dumps(msg))
+
+    consumerFunc = lambda sio: lambda msg: sio.emit("//blp/mktdata/response", json.dumps(msg))
 
     clientId = request.sid
     if "mktdatacode" not in mktDataRequest:
         raise Exception ("mktdatacode not found in market data request")
-    emit("//blp/mktdata/response", json.dumps(
-        marketDataInterface.pollMarketData(mktDataRequest["mktdatacode"])
-    ))
+
+    sioconsumerFunc = consumerFunc(socketio)
+    sioconsumerFunc(marketDataInterface.pollMarketData(mktDataRequest["mktdatacode"]))
+
     #marketDataInterface.subscribe(
-    #    clientId, mktDataRequest, consumerFunc
+    #    clientId, mktDataRequest, sioconsumerFunc
     #)
+    import time
+    #import random
+    #if (True):
+     #   msg = {
+     #       "Bid": random.random() * (10-1) + 1,
+     #       "Ask": random.random() * (10-1) + 1
+     #     }
+     #emit("//blp/mktdata/response", json.dumps(msg))
+        #time.sleep(2)
