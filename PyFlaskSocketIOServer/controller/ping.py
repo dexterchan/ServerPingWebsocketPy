@@ -2,6 +2,7 @@ from PyFlaskSocketIOServer.app import socketio
 from flask_socketio import emit
 from flask import request
 import json
+import eventlet
 
 from PyMktData.service.marketDataService import DummyMarkDataImpl
 
@@ -34,17 +35,19 @@ def handle_marketdataSubscription(mktDataRequest):
         raise Exception ("mktdatacode not found in market data request")
 
     sioconsumerFunc = consumerFunc(socketio)
-    sioconsumerFunc(marketDataInterface.pollMarketData(mktDataRequest["mktdatacode"]))
+    #sioconsumerFunc(marketDataInterface.pollMarketData(mktDataRequest["mktdatacode"]))
 
     #marketDataInterface.subscribe(
     #    clientId, mktDataRequest, sioconsumerFunc
     #)
     import time
-    #import random
-    #if (True):
-     #   msg = {
-     #       "Bid": random.random() * (10-1) + 1,
-     #       "Ask": random.random() * (10-1) + 1
-     #     }
-     #emit("//blp/mktdata/response", json.dumps(msg))
-        #time.sleep(2)
+    import random
+    cnt = 0
+    while (True):
+        cnt += 1
+        msg = {
+            "Bid": random.random() * (10-1) + 1,
+            "Ask": random.random() * (10-1) + 1
+        }
+        sioconsumerFunc(json.dumps(msg))
+        eventlet.sleep(1)
