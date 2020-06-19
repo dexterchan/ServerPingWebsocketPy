@@ -1,9 +1,9 @@
-from PyPingServer.app import socketio
-from flask_socketio import send, emit
+from PyFlaskSocketIOServer.app import socketio
+from flask_socketio import emit
 from flask import request
 import json
 
-from PyPingServer.service.marketDataService import DummyMarkDataImpl
+from PyMktData.service.marketDataService import DummyMarkDataImpl
 
 marketDataInterface = None
 
@@ -25,12 +25,16 @@ def connect():
 
 @socketio.on("//blp/mktdata")
 def handle_marketdataSubscription(mktDataRequest):
-    def consumerFunc(msg):
-        emit("//blp/mktdata/response", json.dumps(msg))
+    #not working with flask websocket.... lost the session when callback by thread
+    #def consumerFunc(msg):
+    #    emit("//blp/mktdata/response", json.dumps(msg))
 
     clientId = request.sid
     if "mktdatacode" not in mktDataRequest:
         raise Exception ("mktdatacode not found in market data request")
-    marketDataInterface.subscribe(
-        clientId, mktDataRequest, consumerFunc
-    )
+    emit("//blp/mktdata/response", json.dumps(
+        marketDataInterface.pollMarketData(mktDataRequest["mktdatacode"])
+    ))
+    #marketDataInterface.subscribe(
+    #    clientId, mktDataRequest, consumerFunc
+    #)

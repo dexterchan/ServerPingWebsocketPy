@@ -1,4 +1,4 @@
-from PyPingServer.app import  app
+from PyFlaskSocketIOServer.app import  app
 
 
 

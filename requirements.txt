@@ -4,3 +4,4 @@ setuptools
 pytest
 eventlet
 pyjwt
+python-socketio

@@ -1,5 +1,5 @@
-from PyPingServer.model.Observer import MktDataObserver
-from PyPingServer.model.Subject import MarketDataSubject
+from PyMktData.model.Observer import MktDataObserver
+from PyMktData.model.Subject import MarketDataSubject
 import time
 import abc
 import random
@@ -20,6 +20,10 @@ class MarketDataInterface(abc.ABC):
 
   @abc.abstractmethod
   def unsubscribe(self,  clientId, mktdatacode):
+    pass
+
+  @abc.abstractmethod
+  def pollMarketData(self, mktdatacode):
     pass
 
 import threading
@@ -69,8 +73,10 @@ class DummyMarkDataImpl(MarketDataInterface):
       for mktdatacode in self.subjectMap.keys():
         logging.info(f"length of subjectmap {len(self.subjectMap)}")
         self.subjectMap[mktdatacode].notifyObservers(
-          {
+          self.pollMarketData(mktdatacode)
+        )
+  def pollMarketData(self, mktdatacode):
+    return {
             "Bid": random.random() * (self.max - self.min) + self.min,
             "Ask": random.random() * (self.max - self.min) + self.min
           }
-        )

@@ -1,7 +1,7 @@
 import unittest
-from PyPingServer.model.Observer import MktDataObserver
-from PyPingServer.model.Subject import MarketDataSubject
-from PyPingServer.service.marketDataService import DummyMarkDataImpl
+from PyMktData.model.Observer import MktDataObserver
+from PyMktData.model.Subject import MarketDataSubject
+from PyMktData.service.marketDataService import DummyMarkDataImpl
 import logging
 from collections import deque
 import time
