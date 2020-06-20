@@ -61,11 +61,10 @@ class MarketDataServiceSuite(unittest.TestCase):
 
                 if counter>10:
                     break
+            except queue.Empty as em:
+                print(em)
             except Exception as ex:
-                if ex.__class__.__name__ == "Empty":
-                    print(ex)
-                else:
-                    raise ex
+                raise ex
 
         marketDataInterface.disconnect()
 

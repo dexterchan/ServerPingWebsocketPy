@@ -39,7 +39,7 @@ class DummyMarkDataImpl(MarketDataInterface):
     self.max = 10
     self.subjectMap = {}
     self.isAlive = True
-    self.WAITTIME = 1
+    self.WAITTIME = 2
 
   def connect(self):
     logging.info("Connecting to market data server")
