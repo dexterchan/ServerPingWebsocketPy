@@ -1,6 +1,7 @@
 from PyFlaskSocketIOServer.app import socketio
 from flask_socketio import emit
 from flask import request
+from flask import jsonify
 import json
 import eventlet
 import logging
@@ -63,7 +64,7 @@ def handle_marketdataSubscription(mktDataRequest):
         try:
             msg = blockingQueue.consumeItem(TIMEOUT_MKT_SEC)
             logging.info("publish data to "+clientId+":"+json.dumps(msg))
-            flushStreamData(socketio,  "//blp/mktdata/response", json.dumps(msg))
+            flushStreamData(socketio,  "//blp/mktdata/response", (msg))
         except queue.Empty as em:
             print(em)
         except Exception as ex:
