@@ -38,11 +38,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
     location = args.location
 
-    url = f"ws://{location}"
+    url = f"{location}"
     sio.connect(url, headers={"user":"pigpig", "token":"abcd"})
 
     subscribeMktData("AAPL 150117C00600000 EQUITY")
-
+    subscribeMktData("AMZN 150117C00600000 EQUITY")
+    subscribeMktData("MSFT 150117C00600000 EQUITY")
     time.sleep(60*10)
 
     sio.wait()

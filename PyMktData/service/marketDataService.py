@@ -4,6 +4,7 @@ import time
 import abc
 import random
 import logging
+import re
 
 class MarketDataInterface(abc.ABC):
   @abc.abstractmethod
@@ -39,7 +40,10 @@ class DummyMarkDataImpl(MarketDataInterface):
     self.max = 10
     self.subjectMap = {}
     self.isAlive = True
-    self.WAITTIME = 1
+    self.WAITTIME = 0.2
+
+    self.amzn = re.compile(r"AMZN (\w*) EQUITY")
+    self.apple = re.compile(r"AAPL (\w*) EQUITY")
 
   def connect(self):
     logging.info("Connecting to market data server")
@@ -77,8 +81,21 @@ class DummyMarkDataImpl(MarketDataInterface):
           self.pollMarketData(mktdatacode)
         )
   def pollMarketData(self, mktdatacode):
+    basePrice = 0;
+    if (re.match(r"AMZN (\w*) EQUITY",mktdatacode)):
+      basePrice = 3200 + (random.random() * (self.max - self.min) + self.min);
+    elif (re.match(r"AAPL (\w*) EQUITY", mktdatacode)):
+      basePrice = 380 + (random.random() * (self.max - self.min) + self.min);
+    elif (re.match(r"MSFT (\w*) EQUITY", mktdatacode)):
+      basePrice = 207.07 + (random.random() * (self.max - self.min) + self.min);
+    elif (re.match(r"TSLA (\w*) EQUITY", mktdatacode)):
+      basePrice = 1500 + (random.random() * (self.max - self.min) + self.min);
+    else:
+      basePrice = random.random() * (self.max - self.min) + self.min
+
     return {
             "timestamp_ms": int(time.time() * 1000*1000),
-            "Bid": random.random() * (self.max - self.min) + self.min,
-            "Ask": random.random() * (self.max - self.min) + self.min
+            "mktdatacode":mktdatacode,
+            "Bid": basePrice * 1.001,
+            "Ask": basePrice * 0.999
           }

@@ -5,3 +5,4 @@ pytest
 eventlet
 pyjwt
 aiohttp
+Flask-Cors

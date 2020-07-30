@@ -1,9 +1,11 @@
 from PyFlaskSocketIOServer.app import socketio
 from flask_socketio import emit
 from flask import request
+from flask import jsonify
 import json
 import eventlet
 import logging
+import queue
 from PyMktData.service.marketDataService import DummyMarkDataImpl
 
 marketDataInterface = None
@@ -59,7 +61,12 @@ def handle_marketdataSubscription(mktDataRequest):
         raise Exception("client is not disconnected")
 
     while(ClientMapALive[clientId]):
-        msg = blockingQueue.consumeItem(TIMEOUT_MKT_SEC)
-        logging.info(clientId+":received data"+json.dumps(msg))
-        flushStreamData(socketio,  "//blp/mktdata/response", json.dumps(msg))
+        try:
+            msg = blockingQueue.consumeItem(TIMEOUT_MKT_SEC)
+            logging.info("publish data to "+clientId+":"+json.dumps(msg))
+            flushStreamData(socketio,  "//blp/mktdata/response", (msg))
+        except queue.Empty as em:
+            print(em)
+        except Exception as ex:
+            raise ex
     logging.info("market data disconnect Blocking queue released")

@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ "$LOCATION" == "" ]
 then
-    LOCATION=localhost:80
+    LOCATION=ws://localhost:80
 fi
 export PYTHONPATH=.
 
