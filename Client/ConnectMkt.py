@@ -42,7 +42,8 @@ if __name__ == "__main__":
     sio.connect(url, headers={"user":"pigpig", "token":"abcd"})
 
     subscribeMktData("AAPL 150117C00600000 EQUITY")
-
+    subscribeMktData("AMZN 150117C00600000 EQUITY")
+    subscribeMktData("MSFT 150117C00600000 EQUITY")
     time.sleep(60*10)
 
     sio.wait()
