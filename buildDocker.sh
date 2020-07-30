@@ -2,5 +2,6 @@
 rm -Rf dist
 python3 setup.py sdist
 
-docker build --tag pigpiggcp/serverpingwebsocket:v0.py .
-docker push pigpiggcp/serverpingwebsocket:v0.py
+VERSION=v1
+docker build --tag pigpiggcp/serverpingwebsocket:$VERSION.py .
+docker push pigpiggcp/serverpingwebsocket:$VERSION.py
