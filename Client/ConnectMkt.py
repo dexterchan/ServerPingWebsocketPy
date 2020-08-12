@@ -1,6 +1,7 @@
 import socketio
 import json
 import logging
+import uuid
 import time
 sio = socketio.Client(reconnection=True)
 counter = 0
@@ -26,6 +27,7 @@ def __mktdataresponse(data):
 
 def subscribeMktData(mktdatacode:str):
     mktRequest = {
+        "sessionid" : str(uuid.uuid4()),
         "mktdatacode": mktdatacode,
         "fields": ["BID", "ASK"]
     }

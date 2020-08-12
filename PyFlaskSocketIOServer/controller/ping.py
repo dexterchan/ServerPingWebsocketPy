@@ -14,6 +14,8 @@ TIMEOUT_MKT_SEC=10
 
 ClientMapALive = {}
 
+
+
 def initMarketData():
     global marketDataInterface
     marketDataInterface = DummyMarkDataImpl()
@@ -51,22 +53,32 @@ def handle_marketdataSubscription(mktDataRequest):
 
     blockingQueue = BlockingQueue()
     clientId = request.sid
+    if "sessionid" in mktDataRequest:
+        sessionid = mktDataRequest["sessionid"]
+    else:
+        sessionid = clientId
     if "mktdatacode" not in mktDataRequest:
         raise Exception ("mktdatacode not found in market data request")
 
     marketDataInterface.subscribe(
-        clientId, mktDataRequest, blockingQueue.insertItem
+        sessionid, mktDataRequest, blockingQueue.insertItem
     )
     if clientId not in ClientMapALive:
         raise Exception("client is not disconnected")
 
-    while(ClientMapALive[clientId]):
-        try:
-            msg = blockingQueue.consumeItem(TIMEOUT_MKT_SEC)
-            logging.info("publish data to "+clientId+":"+json.dumps(msg))
-            flushStreamData(socketio,  "//blp/mktdata/response", (msg))
-        except queue.Empty as em:
-            print(em)
-        except Exception as ex:
-            raise ex
+    msg = {"timestamp_ms": 1597247872319358, "mktdatacode": mktDataRequest["mktdatacode"], "Bid": 0, "Ask": 0}
+
+    flushStreamData(socketio, "//blp/mktdata/response", (msg))
+    socketio.emit("//blp/mktdata/response", (msg), broadcast=False)
+    logging.info(f"{clientId}:{sessionid}:{json.dumps(msg)}")
+
+    # while(ClientMapALive[clientId]):
+    #     try:
+    #         msg = blockingQueue.consumeItem(TIMEOUT_MKT_SEC)
+    #         logging.info(f"{clientId}:{sessionid}:{json.dumps(msg)}")
+    #         flushStreamData(socketio,  "//blp/mktdata/response", (msg))
+    #     except queue.Empty as em:
+    #         print(em)
+    #     except Exception as ex:
+    #         raise ex
     logging.info("market data disconnect Blocking queue released")
